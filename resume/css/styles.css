@@ -1,0 +1,131 @@
+body, header, nav, main, footer, h1, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    margin: 10px;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header img {
+    border-color: navy;
+    border-width: 15px;
+    border: solid;
+    /*display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+}
+
+nav {
+    background-color: ivory;
+    border-color: navy;
+    border-width: 15px;
+    border: solid;
+    position: absolute;
+    left: 15%;
+    top: 0px;
+    margin: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: navy;
+}
+
+#warning {
+    font-weight: bold;
+    color: red;
+}
+
+#opening {
+    /*background-color: #91c0eb;*/
+    border-color: navy;
+    background-color: ivory;
+    border-width: 15px;
+    text-align: center;
+    border: solid;
+    margin: 0% 20% 0% 20%;
+    padding: 5px;
+}
+
+#opening h1 {
+    color: navy;
+}
+
+#experience {
+    /*background-color: #91c0eb;*/
+    border-color: navy;
+    background-color: ivory;
+    border-width: 15px;
+    border: solid;
+    margin: 0% 20% 0% 20%;
+    padding: 5px;
+}
+
+#experience h1 {
+    color: navy;
+}
+
+#education {
+    /*background-color: #91c0eb;*/
+    border-color: navy;
+    background-color: ivory;
+    border-width: 15px;
+    border: solid;
+    margin: 0% 20% 0% 20%;
+    padding: 5px;
+}
+
+#education h1 {
+    color: navy;
+    font-weight: bold;
+}
+
+#skills {
+    /*position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 10px;
+    padding: 5px; */
+    /*background-color: #91c0eb;*/
+    border-color: navy;
+    background-color: ivory;
+    border-width: 10px;
+    border: solid;
+    margin: 0% 20% 0% 20%;
+}
+
+#skills h1 {
+    color: navy;
+}
+
+#skills h2 {
+    font-size: medium;
+}
+
+footer {
+    text-align: center;
+    background-color: ivory;
+    font-size: small;
+    margin: 0% 20% 0% 20%;
+}
+
+footer a {
+    text-decoration: none;
+}
