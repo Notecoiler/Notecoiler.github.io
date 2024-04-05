@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Ticket</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function submitTicket() {
+            //xhr.open("POST", `http://127.0.0.1:8000/tickets/add?title=Something&category=${category}&description=${description}`, true);
+            var title = document.getElementById("title").value;
+            var category = document.getElementById("category").value;
+            var email = document.getElementById("email").value;
+            var description = document.getElementById("description").value;
+            /*var data = {
+                title: title,
+                category: category,
+                description: description
+            };*/
+            var xhr = new XMLHttpRequest();
+            
+            xhr.open("POST", "http://24.88.178.207:8000/tickets/add/", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            /*
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        alert("Ticket submitted successfully");
+                    } else {
+                        alert("Failed to submit ticket");
+                    }
+                }
+            };*/
+
+            xhr.send(`title=${title}&category=${category}&description=${description}`);
+
+            statuscode = xhr.status;
+
+            if (statuscode == 200) {
+                alert("Ticket submitted successfully");
+            } else {
+                console.log(statuscode)
+                alert("Failed to submit ticket");
+            }
+            
+            
+            /*xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        alert("Ticket submitted successfully");
+                    } else {
+                        alert("Failed to submit ticket");
+                    }
+                }
+            };*/
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return submitTicket();">
+        <h1>Ticket Information</h1>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="category">Category:</label><br>
+        <select id="category" name="category"><br>
+            <option value="Category1">Category1</option>
+            <option value="Category2">Category2</option>
+            <option value="Category3">Category3</option>
+        </select><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
